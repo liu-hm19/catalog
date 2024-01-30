@@ -10,7 +10,7 @@ schema ResourceBuilder[input: palworld.PalWorldServer]:
             cidr_block = "172.16.0.0/12"
         }
         extensions: {
-            provider: "registry.terraform.io/aliyun/alicloud/1.215.0"
+            provider: "registry.terraform.io/aliyun/alicloud/1.209.1"
             providerMeta: {
                 region: "cn-hangzhou"
             }
@@ -28,7 +28,7 @@ schema ResourceBuilder[input: palworld.PalWorldServer]:
             zone_id = "cn-hangzhou-h"
         }
         extensions: {
-            provider: "registry.terraform.io/aliyun/alicloud/1.215.0"
+            provider: "registry.terraform.io/aliyun/alicloud/1.209.1"
             providerMeta: {
                 region: "cn-hangzhou"
             }
@@ -44,7 +44,7 @@ schema ResourceBuilder[input: palworld.PalWorldServer]:
             vpc_id = "$kusion_path.aliyun:alicloud:alicloud_vpc:" + input.name + ".id"
         }
         extensions: {
-            provider: "registry.terraform.io/aliyun/alicloud/1.215.0"
+            provider: "registry.terraform.io/aliyun/alicloud/1.209.1"
             providerMeta: {
                 region: "cn-hangzhou"
             }
@@ -65,7 +65,7 @@ schema ResourceBuilder[input: palworld.PalWorldServer]:
             cidr_ip = "0.0.0.0/0"
         }
         extensions: {
-            provider: "registry.terraform.io/aliyun/alicloud/1.215.0"
+            provider: "registry.terraform.io/aliyun/alicloud/1.209.1"
             providerMeta: {
                 region: "cn-hangzhou"
             }
@@ -86,7 +86,7 @@ schema ResourceBuilder[input: palworld.PalWorldServer]:
             cidr_ip = "0.0.0.0/0"
         }
         extensions: {
-            provider: "registry.terraform.io/aliyun/alicloud/1.215.0"
+            provider: "registry.terraform.io/aliyun/alicloud/1.209.1"
             providerMeta: {
                 region: "cn-hangzhou"
             }
@@ -102,13 +102,11 @@ schema ResourceBuilder[input: palworld.PalWorldServer]:
             image_id = "ubuntu_20_04_x64_20G_alibase_20231221.vhd"
             if input.size == "small": 
                 instance_type = "ecs.u1-c1m2.large" # ¥0.70/h
-                system_disk_category = "cloud_essd_entry"
             elif input.size == "medium": 
                 instance_type = "ecs.c7.xlarge"     # ¥1.20/h
-                system_disk_category = "cloud_essd"
             else:
                 instance_type = "ecs.c7.2xlarge"    # ¥2.0/h
-                system_disk_category = "cloud_essd"
+            system_disk_category = "cloud_essd"
             instance_name = input.name
             internet_charge_type = "PayByTraffic"
             internet_max_bandwidth_out = input.bandwidth
@@ -117,7 +115,7 @@ schema ResourceBuilder[input: palworld.PalWorldServer]:
             ]
         }
         extensions: {
-            provider: "registry.terraform.io/aliyun/alicloud/1.215.0"
+            provider: "registry.terraform.io/aliyun/alicloud/1.209.1"
             providerMeta: {
                 region: "cn-hangzhou"
             }
@@ -137,7 +135,7 @@ schema ResourceBuilder[input: palworld.PalWorldServer]:
             timeout = 600
         }
         extensions: {
-            provider: "registry.terraform.io/aliyun/alicloud/1.215.0"
+            provider: "registry.terraform.io/aliyun/alicloud/1.209.1"
             providerMeta: {
                 region: "cn-hangzhou"
             }
@@ -158,7 +156,7 @@ schema ResourceBuilder[input: palworld.PalWorldServer]:
             }
         }
         extensions: {
-            provider: "registry.terraform.io/aliyun/alicloud/1.215.0"
+            provider: "registry.terraform.io/aliyun/alicloud/1.209.1"
             providerMeta: {
                 region: "cn-hangzhou"
             }

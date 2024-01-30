@@ -1,0 +1,6 @@
+kcl_cli_configs:
+  file:
+    - ../base/base.k
+    - ./main.k
+    - ${KCL_MOD}/models/terraform/render.k
+  

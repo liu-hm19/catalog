@@ -1,0 +1,4 @@
+name: palworldserver-kcl
+generator:
+  type: KCL
+  

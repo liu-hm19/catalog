@@ -1,11 +1,11 @@
 schema Port:
-    """ Port defines the exposed port of Service, which can be used to describe how the Service
+    """ Port defines the exposed port of Workload, which can be used to describe how the Workload
     get accessed.
 
     Attributes
     ----------
     port: int, default is 80, required.
-        The exposed port of the Service.
+        The exposed port of the Workload.
     targetPort: int, default is Undefined, optional.
         The backend container port. If empty, set it the same as the port.
     protocol: "TCP" | "UDP", default is "TCP", required.
@@ -15,7 +15,7 @@ schema Port:
 
     Examples
     --------
-    import catalog.models.schema.v1.workload.network as n
+    import catalog.models.schema.v1.network as n
 
     port = n.Port {
         port: 80

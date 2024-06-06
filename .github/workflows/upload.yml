@@ -23,6 +23,9 @@ jobs:
           # Get changed files. 
           dirs=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | awk -F'/' '{print $1}' | sort -u | uniq)
 
+          # Print changed directories. 
+          echo "Changed diff directories: ${dirs[@]}"
+
           # Check current file tree. 
           tree .
 
